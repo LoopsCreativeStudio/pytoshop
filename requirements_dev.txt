@@ -3,3 +3,4 @@ pytest-cov
 sphinx
 coverage
 flake8
+packbits

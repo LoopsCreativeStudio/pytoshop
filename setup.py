@@ -14,34 +14,24 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     'cython',
     'numpy',
+    'packbits',
 ]
 
 test_requirements = [
     'pytest'
 ]
 
-
-try:
-    from Cython.Build import cythonize
-except ImportError:
-    extensions = []
-else:
-    extensions = cythonize([
-        Extension(
-            "pytoshop.packbits",
-            ["pytoshop/packbits.pyx"]
-        )
-    ])
+extensions = []
 
 
 setup(
     name='pytoshop',
-    version='1.2.1',
+    version='1.2.2',
     description="A Python-based library to write Photoshop PSD files",
     long_description=readme + '\n\n' + history,
     author="Michael Droettboom",
     author_email='mdboom@gmail.com',
-    url='https://github.com/mdboom/pytoshop',
+    url='https://https://github.com/LoopsCreativeStudio/pytoshop',
     packages=[
         'pytoshop',
         'pytoshop.user'

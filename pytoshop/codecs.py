@@ -13,6 +13,7 @@ import zlib
 
 
 import numpy as np
+import packbits
 
 
 from typing import Any, BinaryIO, Callable, Dict, Tuple  # NOQA
@@ -22,10 +23,7 @@ from . import enums
 from . import util
 
 
-try:
-    from . import packbits  # type: ignore
-except ImportError:
-    pass
+
 
 
 _decompress_params = """
